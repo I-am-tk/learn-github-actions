@@ -1,0 +1,30 @@
+name: Deployment
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4 # the runner ubuntu-latest comes with nodejs by default
+        with:
+          node-version: 22
+      - name: Install Packages
+        run: npm ci # This is better for production. If want to install dependencies requires to run prod. --only=production
+      - name: Run test
+        run: npm test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4 # the runner ubuntu-latest comes with nodejs by default
+        with:
+          node-version: 22
+      - name: Install Packages
+        run: npm ci # This is better for production. If want to install dependencies requires to run prod. --only=production
+      - name: Deploy
+        run: echo "Deploying"

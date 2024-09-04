@@ -56,8 +56,11 @@ jobs:
       run: echo "Done -> Bye"
 ```
 
+Steps run on a server but they don't run inside your repository.
+
 ## Questions
 
 [ ] What is the use of github cli?
-[ ] Where can we find all the events?
+[x] Where can we find all the workflow triggers?
+   - https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
 [ ] Where can I find all the runners?
