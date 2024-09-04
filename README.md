@@ -40,6 +40,22 @@ Step could be a shell script or an action.
 
 Steps are executed in order and they can be conditional
 
+## Basic Workflow
+
+```yml
+name: First Workflow
+on: workflow_dispatch
+
+jobs:
+  greet:
+    - name: "Greet"
+      run: |
+        echo "Hello"
+        echo "World"
+    - name: "Bye"
+      run: echo "Done -> Bye"
+```
+
 ## Questions
 
 [ ] What is the use of github cli?
