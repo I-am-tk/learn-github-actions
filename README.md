@@ -39,3 +39,9 @@ There are conditional Job.
 Step could be a shell script or an action.
 
 Steps are executed in order and they can be conditional
+
+## Questions
+
+[ ] What is the use of github cli?
+[ ] Where can we find all the events?
+[ ] Where can I find all the runners?
