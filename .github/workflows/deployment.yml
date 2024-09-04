@@ -14,7 +14,7 @@ jobs:
       - name: Install PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 8
       - name: Install Packages
         run: pnpm install --frozen-lockfile
         # run: npm ci # This is better for production. If want to install dependencies requires to run prod. --only=production
@@ -32,7 +32,7 @@ jobs:
       - name: Install PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 8
       - name: Install Packages
         run: pnpm install --frozen-lockfile --prod # don't need --prod if NODE_ENV is set to production
         # run: npm ci --only# This is better for production. If want to install dependencies requires to run prod. --only=production
